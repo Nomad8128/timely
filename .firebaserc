@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "timely-final": {
+      "hosting": {
+        "timely-final": [
+          "timely-final"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "timely-final"
+  }
+}

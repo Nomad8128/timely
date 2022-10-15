@@ -1,0 +1,17 @@
+.full-width-table {
+  width: 100%;
+}
+.data-table {
+  width: 80%;
+  margin: 20px auto;
+}
+.start-button {
+  display: block;
+  margin: 0 auto;
+}
+h3{
+  margin-top:20px;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
