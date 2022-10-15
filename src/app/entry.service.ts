@@ -45,11 +45,6 @@ export class EntryService {
   }
 
   updateEntry(oldName : string, name: string, start: string, end: string, duration: string){
-
-    const db = getFirestore();
-    const colRef = collection(db, 'entry-collection')
-    const q = query(colRef, where("name", "==", oldName))
-
     let updateData = {
       name: name,
       start: start,
@@ -58,14 +53,20 @@ export class EntryService {
       creationDate: serverTimestamp()
     };
 
-    onSnapshot(q, (snapshot) => {
-      let entries: { id: string; }[] = []
-      snapshot.docs.forEach((doc) => {
-        entries.push({ ...doc.data(), id: doc.id})
-        return this.angularFirestore.collection('entry-collection').doc(entries[0].id).set(updateData)
-
-      })
-    })
+    this.angularFirestore
+      .collection('entry-collection', (ref) => ref.where('name', '==', oldName))
+      .get()
+      .subscribe((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          doc.ref
+            .update(updateData)
+            .then(() => {
+              console.log('Document successfully updated!');
+            })
+            .catch(function (error) {
+              console.error('Error updating document: ', error);
+            });
+        });
+      });
   }
-
 }
