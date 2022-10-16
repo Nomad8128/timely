@@ -1,13 +1,13 @@
 <h1 mat-dialog-title>Add entry form</h1>
 <div mat-dialog-content>
-  <form [formGroup]="projectForm">
+  <form [formGroup]="projectForm" #form1="ngForm">
     <mat-form-field appearance="outline">
       <mat-label>Project name</mat-label>
-      <input required formControlName="name" matInput placeholder="Placeholder" />
+      <input required formControlName="name" matInput placeholder="Placeholder" [ngModel]="inputName" (ngModelChange)="valuechange($event)" />
     </mat-form-field>
   </form>
 </div>
 <div mat-dialog-actions [align]="'end'">
   <button mat-raised-button color="warn" mat-dialog-close="">Close</button>
-  <button mat-raised-button color="primary" (click)="addEntry()">Save</button>
+  <button mat-raised-button color="primary" (click)="addEntry()" [disabled]="form1.form.invalid">Save</button>
 </div>
