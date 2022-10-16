@@ -1,7 +1,7 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {EntryService} from "../entry.service";
-import {FormGroup, FormBuilder, Validators} from "@angular/forms";
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import { Component, Inject, OnInit } from '@angular/core';
+import { EntryService } from "../entry.service";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-dialog',
@@ -50,7 +50,7 @@ export class DialogComponent implements OnInit {
   }
 
   addEntry() {
-    this.entryService.addToFirestore(this.projectForm.value.name, this.formatDate2(this.data.start), this.formatDate2(this.data.end), this.formatDate(this.data.duration))
+    this.entryService.addToFirestore(this.projectForm.value.name, this.formatDate2(this.data.start), this.formatDate2(this.data.end), this.formatDate(this.data.duration)).then()
     this.dialogRef.close();
   }
 }

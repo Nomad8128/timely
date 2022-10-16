@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore} from "@angular/fire/compat/firestore";
-import {collection, getFirestore, onSnapshot, query, serverTimestamp, where} from "@angular/fire/firestore";
-import {Entry} from "./entry-model";
+import { serverTimestamp } from "@angular/fire/firestore";
+import { Entry } from "./entry-model";
 
 @Injectable({
   providedIn: 'root'

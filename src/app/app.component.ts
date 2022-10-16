@@ -1,11 +1,11 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {MatTableDataSource} from "@angular/material/table";
-import {Entry} from "./entry-model";
-import {EntryService} from "./entry.service";
-import {MatPaginator} from "@angular/material/paginator";
-import {MatDialog} from "@angular/material/dialog";
-import {DialogComponent} from "./dialog/dialog.component";
-import {DialogEditComponent} from "./dialog-edit/dialog-edit.component";
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatTableDataSource } from "@angular/material/table";
+import { Entry } from "./entry-model";
+import { EntryService } from "./entry.service";
+import { MatPaginator } from "@angular/material/paginator";
+import { MatDialog } from "@angular/material/dialog";
+import { DialogComponent } from "./dialog/dialog.component";
+import { DialogEditComponent } from "./dialog-edit/dialog-edit.component";
 
 
 @Component({
