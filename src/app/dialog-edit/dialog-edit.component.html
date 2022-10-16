@@ -3,19 +3,19 @@
   <form [formGroup]="projectForm" #form2="ngForm">
     <mat-form-field appearance="outline">
       <mat-label>Project name</mat-label>
-      <input required formControlName="name" matInput placeholder="Placeholder" />
+      <input required formControlName="name" matInput placeholder="Enter name" />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Project start</mat-label>
-      <input required  formControlName="start" matInput placeholder="Placeholder" />
+      <input required  formControlName="start" matInput placeholder="dd.mm.yyyy hh:mm" pattern="([0-9]+(\.[0-9]+)+)\s[0-9]+:[0-9]+" />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Project end</mat-label>
-      <input required formControlName="end" matInput placeholder="Placeholder" />
+      <input required formControlName="end" matInput placeholder="dd.mm.yyyy hh:mm" pattern="([0-9]+(\.[0-9]+)+)\s[0-9]+:[0-9]+" />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Project duration</mat-label>
-      <input required formControlName="duration" matInput placeholder="Placeholder" />
+      <input required formControlName="duration" matInput placeholder="mm:ss" pattern="[0-9]+:[0-9]+" />
     </mat-form-field>
   </form>
 </div>
