@@ -1,4 +1,6 @@
-<h2>Timely</h2>
+<mat-toolbar class="header">
+  Timely
+</mat-toolbar>
 
 <div ><button mat-raised-button color="primary" class="start-button" (click)="toggleCollapse()" >{{isCollapsed? 'START' : 'STOP'}}</button></div>
 
@@ -43,8 +45,8 @@
 </table>
 <mat-paginator #paginator
                [pageIndex]="0"
-               [pageSize]="5"
-               [pageSizeOptions]="[1, 2, 5]"
+               [pageSize]="20"
+               [pageSizeOptions]="[1, 2, 5, 10, 20]"
                aria-label="Select page">
 </mat-paginator>
 

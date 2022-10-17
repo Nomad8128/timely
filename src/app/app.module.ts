@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { DialogEditComponent } from './dialog-edit/dialog-edit.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableExporterModule } from "mat-table-exporter";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -29,29 +30,30 @@ import { MatTableExporterModule } from "mat-table-exporter";
     DialogEditComponent
   ],
   entryComponents:[DialogComponent, DialogEditComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
-    AngularFireModule.initializeApp(environment.firebase),
-    MatTableModule,
-    MatButtonModule,
-    MatPaginatorModule,
-    MatIconModule,
-    MatGridListModule,
-    MatPaginatorModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatSortModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatSelectModule,
-    MatTableExporterModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideFirestore(() => getFirestore()),
+        AngularFireModule.initializeApp(environment.firebase),
+        MatTableModule,
+        MatButtonModule,
+        MatPaginatorModule,
+        MatIconModule,
+        MatGridListModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        MatSortModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatSelectModule,
+        MatTableExporterModule,
+        MatToolbarModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
